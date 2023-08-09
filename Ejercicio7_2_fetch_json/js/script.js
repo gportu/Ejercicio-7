@@ -18,10 +18,13 @@ function showData(dataArray) {
   }
 }
 
-fetch(DATA_URL) 
-    .then(response => {return response.json()}) // Convertimos la respuesta a JSON
-    .then(data => showData((data.students))) // Llamamos a la función showData con el array de datos
-    .catch(error => console.error("Error fetching data:", error)); // Manejo de errores en caso de que falle el fetch
+fetch(DATA_URL)
+  .then(response => {
+    return response.json()
+  }) // Convertimos la respuesta a JSON
+  .then(data => showData(data.students)) // Llamamos a la función showData con el array de datos
+  .catch(error => console.error("Error fetching data:", error)); // Manejo de errores en caso de que falle el fetch
 
 // Llamamos a la función para obtener y mostrar los datos
 // Escribe el código necesario para realizar el fetch al archivo con los datos y mostrar los estudiantes con la función showData
+//Las funciones flecha son funciones anónimas y son anónimas porque no tienen nombre, pues sólo las vas a ejectuar una vez, al momento de la definición.
